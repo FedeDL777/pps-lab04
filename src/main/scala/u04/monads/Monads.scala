@@ -1,4 +1,5 @@
 package u04.monads
+
 import u03.extensionmethods.Streams.*, Stream.*
 
 object Monads:

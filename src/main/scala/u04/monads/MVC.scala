@@ -4,7 +4,7 @@ package u04.monads
   import Monads.*, Monad.*, States.*, State.*, CounterStateImpl.*, WindowStateImpl.*
   import u03.extensionmethods.Streams.*
   
-  def mv[SM, SV, AM, AV](m1: State[SM,AM], f: AM => State[SV,AV]): State[(SM,SV), AV] = 
+  def mv[SM, SV, AM, AV](m1: State[SM,AM], f: AM => State[SV, AV]): State[(SM, SV), AV] =
     State: (sm, sv) => 
       val (sm2, am) = m1.run(sm)
       val (sv2, av) = f(am).run(sv)

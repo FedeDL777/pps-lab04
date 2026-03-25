@@ -7,8 +7,6 @@ object Sequences:
     case Nil()
 
   object Sequence:
-    def cons[E](head: E, tail: Sequence[E]): Sequence[E] = Cons(head, tail)
-    def nil[E](): Sequence[E] = Nil()
 
     extension (l: Sequence[Int])
       def sum: Int = l match
@@ -25,15 +23,6 @@ object Sequences:
         case Cons(h, t) if pred(h) => Cons(h, t.filter(pred))
         case Cons(_, t)            => t.filter(pred)
         case Nil()                 => Nil()
-
-      def flatMap[B](mapper: A => Sequence[B]): Sequence[B] = l match
-        case Cons(h, t) => mapper(h).concat(t.flatMap(mapper))
-        case Nil()      => Nil()
-
-      def concat(other: Sequence[A]): Sequence[A] = l match
-        case Cons(h, t) => Cons(h, t.concat(other))
-        case Nil()      => other
-
 
     def of[A](n: Int, a: A): Sequence[A] =
       if (n == 0) then Nil[A]() else Cons(a, of(n - 1, a))

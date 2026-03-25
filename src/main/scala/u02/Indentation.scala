@@ -22,7 +22,7 @@ object Indentation:
   // Single line curly braces with semi-colon
   val res4 = 5 match { case n if n > 0 => "pos"; case 0 => "zero" }
 
-  // Single parameter of a method could be indented with colon
+  // Single parameter of a function could be indented with colon
   println:
      5 + 10
 

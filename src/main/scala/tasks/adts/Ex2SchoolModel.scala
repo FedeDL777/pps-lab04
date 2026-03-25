@@ -43,6 +43,7 @@ object SchoolModel:
      * @return the empty school
      */
     def emptySchool: School
+    
     extension (school: School)
       /**
        * This method should return the list of courses

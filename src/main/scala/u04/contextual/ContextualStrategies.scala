@@ -1,5 +1,6 @@
 package u04.contextual
-import u03.extensionmethods.Sequences.* 
+
+import u03.extensionmethods.Sequences.*
 import u03.extensionmethods.Optionals.* 
 import Sequence.*
 

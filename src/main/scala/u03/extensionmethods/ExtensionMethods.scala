@@ -15,7 +15,7 @@ object ExtensionMethods extends App:
   // standard call in curried version is still possible
   println:
     mult2(5)(3)
-  // OO-like syntax
+  // OO-like syntax, as pure syntactic sugar
   println:
     5.mult2(3)
 

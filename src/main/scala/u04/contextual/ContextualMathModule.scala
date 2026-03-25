@@ -1,7 +1,7 @@
 package u04.contextual
 
 @main def tryContextualMathModule =
-  import u04.MathModules.*
+  import u04.moduletypes.MathModules.*
 
   // probability of having x successes over n trials, where each success has prob. p
   // abstracting from specific implementation of the math module

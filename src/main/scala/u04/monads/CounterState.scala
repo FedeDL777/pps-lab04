@@ -34,13 +34,13 @@ object CounterStateImpl extends CounterState:
     seq(inc(), inc()).run(initialCounter()) // ((), 2)
 
   def increment(n: Int): State[Counter, Unit] =
-    if (n == 0)
-    then nop()
-    else
-      for
-        _ <- increment(n - 1)
-        _ <- inc()
-      yield ()  
+    if n == 0
+      then nop()
+      else
+        for
+          _ <- increment(n - 1)
+          _ <- inc()
+        yield ()
 
   val session: State[Counter, Int] =
     for 

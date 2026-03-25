@@ -5,9 +5,9 @@ import org.junit.Assert.*
 import tasks.adts.Ex1ComplexNumbers.*
 
 /* Tests should be clear, but note they are expressed independently of the 
-   specific implementation
+   specific implementation  -- UNCOMMENT FOR THE EXERCISE!
 */
-
+/**
 class ComplexTest:
 
   // Choice of implementation to test
@@ -38,3 +38,5 @@ class ComplexTest:
     assertEquals("10.0 - 5.0i", complex(10.0, -5.0).asString())
     assertEquals("5.0i", complex(0, 5.0).asString())
     assertEquals("-5.0i", complex(0, -5.0).asString())
+
+**/

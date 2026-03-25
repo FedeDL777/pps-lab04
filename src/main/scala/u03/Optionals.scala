@@ -22,13 +22,6 @@ object Optionals:
     def map[A, B](opt: Optional[A])(f: A => B): Optional[B] = opt match
       case Just(a) => Just(f(a))
       case _       => Empty()
-    
-    def flatMap[A, B](opt: Optional[A])(f: A => Optional[B]): Optional[B] = opt match
-      case Just(a) => f(a)
-      case _       => Empty()
-    def contains[A](opt: Optional[A], elem: A): Boolean = opt match
-      case Just(a) => a == elem
-      case _       => false
 
 @main def tryOptionals =
   import Optionals.* // to work with Optionals (to see Optional type)

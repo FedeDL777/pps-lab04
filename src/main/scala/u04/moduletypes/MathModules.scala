@@ -1,8 +1,8 @@
-package u04
+package u04.moduletypes
 
 object MathModules :
   
-  // type of a module
+  // type of math modules
   trait MathModuleType:
     def factorial(n: Int): Int
     def exp(base: Double, power: Int): Double
@@ -11,7 +11,7 @@ object MathModules :
   object BasicMathModule extends MathModuleType:
 
     def factorial(n: Int): Int = 
-      if n == 0 then 1 else n * factorial(n - 1)
+      if n == 0 then 1 else n * factorial(n - 1) // note if-then-else
 
     def exp(base: Double, power: Int): Double = 
       if power == 0 then 1 else base * exp(base, power - 1)
