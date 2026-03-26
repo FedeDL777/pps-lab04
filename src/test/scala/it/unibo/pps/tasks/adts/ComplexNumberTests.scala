@@ -10,7 +10,7 @@ import Ex1ComplexNumbers.*
 class ComplexTest:
 
   // Choice of implementation to test
-  val complexADT: ComplexADT = BasicComplexADT
+  val complexADT: ComplexADT = BaseclassComplexADT
   import complexADT.*
 
   // From now, everything is independent of specific implementation of Complex

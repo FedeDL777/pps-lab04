@@ -2,7 +2,8 @@ package it.unibo.pps.tasks.adts
 
 import it.unibo.pps.u03.extensionmethods.Sequences.Sequence, Sequence.*
 
-/*  Exercise 2: 
+/*
+ *  Exercise 2:
  *  Implement the below trait, and write a meaningful test.
  *  Suggestions:
  *  - reuse Sequences and Optionals as imported above
