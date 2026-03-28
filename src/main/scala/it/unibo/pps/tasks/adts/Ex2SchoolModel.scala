@@ -1,6 +1,9 @@
 package it.unibo.pps.tasks.adts
 
-import it.unibo.pps.u03.extensionmethods.Sequences.Sequence, Sequence.*
+import it.unibo.pps.u03.extensionmethods.Sequences.Sequence
+import Sequence.*
+import it.unibo.pps.u02.Modules.Person
+import it.unibo.pps.u02.Modules.Person.Teacher
 
 /*
  *  Exercise 2:
@@ -114,11 +117,11 @@ object SchoolModel:
       def hasCourse(name: String): Boolean
   object BasicSchoolModule extends SchoolModule:
     override type School = Nothing
-    override type Teacher = Nothing
-    override type Course = Nothing
+    override type Teacher = Sequence[String]
+    override type Course = Sequence[String]
 
-    def teacher(name: String): Teacher = ???
-    def course(name: String): Course = ???
+    def teacher(name: String): Teacher = Cons(name, Nil())
+    def course(name: String): Course = Cons(name, Nil())
     def emptySchool: School = ???
 
     extension (school: School)
